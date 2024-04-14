@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero,
+header,
+footer {
+    display: flex;
+    background-color: #1f2937;
+    color: white;
+}
+
+.info {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+}
+
+.quote {
+    background-color: #e6e7eb;
+}
+
+.cta {
+    background-color: #3882f6;
+    color: white;
+}
