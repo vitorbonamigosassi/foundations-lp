@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* 300, 900 */
+
+:root {
+    --primary: #b1aba4;
+    --secondary: #f9faf8;
+    --accent: #36505B;
+}
+
 * {
     font-family: 'Roboto', Arial, sans-serif;
+    color: var(--secondary);
 }
 
 body {
@@ -12,32 +19,31 @@ section {
     padding: 80px;
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img {
+    padding: 20px;
+}
+
 h1 {
     font-size: 48px;
     font-weight: 900;
-    color: #f9faf8;
-}
-
-
-.info > h2 {
-    font-size: 36px;
-    font-weight: 900;
-    color: #1f2937;
 }
 
 button {
     border: none;
     border-radius: 8px;
     padding: 8px 24px;
-    background-color: #3882f6;
-    color: white;
+    background-color: var(--accent);
     font-weight: 900;
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+button:hover {
+    background-color: #19252b;
 }
 
 ul {
@@ -48,15 +54,19 @@ ul {
     gap: 20px
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 em {
     font-size: 36px;
     font-weight: 300;
-    color: #1f2237;
+    color: var(--accent);
+}
+
+p,
+strong {
+    color: var(--accent)
+}
+
+a {
+    text-decoration: none;
 }
 
 footer {
@@ -68,24 +78,49 @@ footer {
 header,
 footer {
     display: flex;
-    background-color: #1f2937;
-    color: white;
+    background-color: var(--primary);
 }
 
-.hero > div {
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container div {
+    width: 300px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero>div {
     width: 50%;
+    padding: 12px
 }
 
 .info {
     text-align: center;
 }
 
-.container {
-    display: flex;
+.info>h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.info .container>div img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    border-radius: 12px;
 }
 
 .quote {
-    background-color: #e6e7eb;
+    background-color: var(--secondary);
 }
 
 .cta {
@@ -95,20 +130,19 @@ footer {
     margin: 80px 160px;
     border-radius: 12px;
     padding: 12px 24px;
-    background-color: #3882f6;
-    color: white;
+    background-color: var(--accent);
 }
 
-#cta-btn{
-    border: 2px solid white ;
+.cta div p {
+    color: var(--secondary)
+}
+
+#cta-btn {
+    border: 2px solid var(--secondary);
+    flex-shrink: 0;
 }
 
 #hero-quote {
     font-size: 18px;
-    color: #e5e7eb;
-}
-
-#logo {
-    font-size: 24px;
     color: #f9faf8;
 }
